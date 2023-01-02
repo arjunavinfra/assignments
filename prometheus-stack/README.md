@@ -15,7 +15,9 @@ Master Assignment
  Create a custom dashboard in Grafana and add panels for the following:-
  
 [] Disk Usage.(Refer https://devconnected.com/monitoring-disk-i-o-on-linux-with-the-node-exporter/)
+
 [] CPU Usage.(Refer https://www.robustperception.io/understanding-machine-cpu-usage/)
+
 [] Network Usage.(Refer https://www.robustperception.io/network-interface-metrics-from-the-node-exporter/)
 
 
