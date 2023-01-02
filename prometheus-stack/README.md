@@ -1,11 +1,13 @@
-# assignments
 
+To setup the full stack run the below 
 
 ```ruby
 kubectl apply -k ./ 
 ````
 
 ````ruby
+
+List of objects created
 
 arjun@ARJUN-AV:~/Documents/assignments$ kubectl get sts,deploy
 NAME                                         READY   AGE
