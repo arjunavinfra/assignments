@@ -60,12 +60,9 @@ spec:
           requests:
             storage: 2Gi
   retention: 3h
-  remoteWrite: 
-    - url:
-        "http://thanos-receive-ingestor-default-0.thanos-receive-ingestor-default.monitoring.svc.cluster.local:19291/api/v1/receive"
-  # thanos:
-  #   image: quay.io/thanos/thanos:v0.28.1
-  #   objectStorageConfig:
-  #     key: thanos.yaml
-  #     name: thanos-objstore-config
+  thanos:
+    image: quay.io/thanos/thanos:v0.28.1
+    objectStorageConfig:
+      key: thanos.yaml
+      name: thanos-objstore-config
   version: 2.40.7
