@@ -72,6 +72,8 @@ arjun@ARJUN-AV:~/Documents/assignments$
 
 ```
 
+
+
 login to prometheus UI , Thanos UI ,Grafana UI with the loadBalancer IP Address 
 
 
