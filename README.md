@@ -44,3 +44,4 @@ thanos-store            ClusterIP      None            <none>           10901/TC
 arjun@ARJUN-AV:~/Documents/assignments$ 
 
 ```
+
