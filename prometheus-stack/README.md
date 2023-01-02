@@ -19,7 +19,10 @@ Master Assignment
 [] Network Usage.(Refer https://www.robustperception.io/network-interface-metrics-from-the-node-exporter/)
 
 
-To setup the full stack run the below 
+#To setup the full stack run the below 
+
+
+Pre request Install MelalLB from https://kind.sigs.k8s.io/docs/user/loadbalancer/
 
 ```ruby
 kubectl apply -k ./ 
@@ -66,4 +69,11 @@ thanos-store            ClusterIP      None            <none>           10901/TC
 arjun@ARJUN-AV:~/Documents/assignments$ 
 
 ```
+
+login to prometheus UI , Thanos UI ,Grafana UI with the loadBalancer IP Address 
+
+
+Grafana Username and Password is `admin`
+
+
 
