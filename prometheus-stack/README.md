@@ -1,11 +1,38 @@
-# assignments
+#Master Assignment 
+ 
+ Run Node Exporter on local machine: https://prometheus.io/docs/guides/node-exporter/
+ 
+ Run Prometheus on local machine: https://prometheus.io/docs/prometheus/latest/getting_started/
+ 
+ Download and run Thanos Sidecar, configure it to read TSDB from local prometheus without bucket config.( Refer https://thanos.io/tip/thanos/quick-tutorial.md/#store-api)
+ 
+  Download and run Thanos Querier, configure it to add the Thanos Sidecar as a store.( Refer https://thanos.io/tip/thanos/quick-tutorial.md/#querierquery)
 
+  Run Grafana on local machine.(Refer https://grafana.com/grafana/download and https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/#2-start-the-server)
+ 
+ Add Querier as a Datasource in the Grafana and name it as Thanos.
+ 
+ Create a custom dashboard in Grafana and add panels for the following:-
+ 
+[] Disk Usage.(Refer https://devconnected.com/monitoring-disk-i-o-on-linux-with-the-node-exporter/)
+
+[] CPU Usage.(Refer https://www.robustperception.io/understanding-machine-cpu-usage/)
+
+[] Network Usage.(Refer https://www.robustperception.io/network-interface-metrics-from-the-node-exporter/)
+
+
+#To setup the full stack run the below 
+
+
+Pre request Install MelalLB from https://kind.sigs.k8s.io/docs/user/loadbalancer/
 
 ```ruby
 kubectl apply -k ./ 
 ````
 
 ````ruby
+
+List of objects created
 
 arjun@ARJUN-AV:~/Documents/assignments$ kubectl get sts,deploy
 NAME                                         READY   AGE
@@ -44,4 +71,13 @@ thanos-store            ClusterIP      None            <none>           10901/TC
 arjun@ARJUN-AV:~/Documents/assignments$ 
 
 ```
+
+
+
+login to prometheus UI , Thanos UI ,Grafana UI with the loadBalancer IP Address 
+
+
+Grafana Username and Password is `admin`
+
+
 
