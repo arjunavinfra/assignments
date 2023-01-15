@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 #Thanos configuration 
 
-- ./thanos-aws-backend-secret.yaml
+
 
 - ./thanos-sidecar-service.yaml
 

@@ -18,8 +18,7 @@ spec:
       port: web
   enableFeatures: []
   externalLabels: 
-    prometheus_replica: main
-    thanos_ruler_replica: main
+    prometheus_replica: main_mod
   image: quay.io/prometheus/prometheus:v2.40.7
   nodeSelector:
     kubernetes.io/os: linux
@@ -58,11 +57,11 @@ spec:
         storageClassName: standard
         resources:
           requests:
-            storage: 2Gi
-  retention: 3h
+            storage: 10Gi
+  retention: 10h
   thanos:
     image: quay.io/thanos/thanos:v0.28.1
     objectStorageConfig:
       key: thanos.yaml
-      name: thanos-objstore-config
+      name: thanos-objectstorage
   version: 2.40.7

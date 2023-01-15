@@ -1,18 +1,25 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: minio-service
+  name: minio
+spec:
+  type: ClusterIP
+  ports:
+    - port: 9000
+      targetPort: 9000
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: minio
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio-external
 spec:
   type: LoadBalancer
   ports:
-    - name: data
-      port: 9000
-      targetPort: 9000
-      protocol: TCP
-    - name: ui
-      port: 37131
-      targetPort: 37131
+    - port: 9001
+      targetPort: 9001
       protocol: TCP
   selector:
-    app: minio
-    
+    app.kubernetes.io/name: minio
